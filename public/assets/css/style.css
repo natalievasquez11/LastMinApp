@@ -1,0 +1,15 @@
+#eventImg {
+    height: 300px;
+    width: 600px;
+    padding: 10px 20px 10px 250px;
+    float: left;
+    clear: both;
+}
+
+.eventInfo {
+    float: left;
+}
+
+.container {
+    margin: 0px;
+}

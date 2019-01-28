@@ -15,40 +15,21 @@
 
 {{!--Title--}}
 <div class='jumbotron'>
-    <h1 class='center-align'>Last Minute Plans</h1>
+    <h1 class='center-align'>Favorite Events</h1>
 </div>
-
-{{!--Container--}}
-<div class='container'></div>
-    {{!--Location--}}
-    <div class="row">
-        <div class="col s2 offset-s5">
-            <a href="#!" class="location center-align"><i class="material-icons left">location_on</i>City Name<i class="material-icons">arrow_drop_down</i></a>
-        </div>
-    </div>
-
-    {{!--Search Bar--}}
-    <div class="row">
-        <div class="col s2 offset-s5">
-            <input id="text" placeholder="Search" name="search">
-            {{!-- <i class="material-icons">search</i> --}}
-        </div>
-    </div>
-
+<br>
+<div class="container">
     {{!--Events title and filter button--}}
     <div class="row center-align">
-        <div class="col s3 offset-s1">
-            <h5>Events</h5>
-        </div>
-        <div class="col s3 offset-s4">
-            <a class="btn grey lighten-1">Filter<i class="material-icons right">filter_list</i></a>
+        <div class="col s3 offset-s2">
+            <h4>Events</h4>
         </div>
     </div>
 
+    {{!--Loop through and display all events in database--}}
     <ul>
-        {{#each all}}
+        {{#each faves}}
         <li>
-            {{!--should hrefs have the same data-id?--}}
             <a href="more-info/{{this.id}}"><img id="eventImg" src='assets/images/dictionary-examples.jpg'></a>
             <div class="eventInfo">
                 <a href="more-info/{{this.id}}"><h5>{{this.eventName}}</h5></a>
@@ -60,6 +41,4 @@
         {{/each}}
     </ul>
 </div>
-
-
-
+</div>

@@ -1,0 +1,31 @@
+{{!-- navigation bar --}}
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="/favorites">Favorites List</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">Sign Out</a></li>
+</ul>
+<nav class="cyan accent-4">
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo" id="back">Home<i class="material-icons">home</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">UserName<i class="material-icons right">arrow_drop_down_circle</i></a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+    {{!--Loop through and display all events in database--}}
+    <ul>
+        {{info}}
+        <li>
+            <img id="eventImg" src='assets/images/dictionary-examples.jpg'>
+            <div class="eventInfo">
+                <h3>{{this.eventName}}</h3>
+                <p>{{this.performer}}</p>
+                <p>{{this.showType}}</p>
+                <p>{{this.price}}</p>
+                <a href="#" class="btn grey lighten-1">Buy</a>
+            </div>
+        </li>
+    </ul>
+</div>
